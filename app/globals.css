@@ -14,6 +14,16 @@ html {
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+html::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 body {
@@ -21,9 +31,32 @@ body {
   background: var(--dark-charcoal);
   font-family: system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
   max-width: 100%;
   position: relative;
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Hide scrollbar for all elements */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+  width: 0;
+  height: 0;
 }
 
 @layer utilities {
