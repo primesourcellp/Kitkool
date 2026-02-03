@@ -12,6 +12,23 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Kitkool - Websites That Turn Visitors Into Customers",
   description: "We build conversion-focused websites and lead systems for small businesses. Get more calls, forms, and customers.",
+  icons: {
+    icon: [
+      { url: "/K .png", sizes: "16x16", type: "image/png" },
+      { url: "/K .png", sizes: "32x32", type: "image/png" },
+      { url: "/K .png", sizes: "96x96", type: "image/png" },
+      { url: "/K .png", sizes: "192x192", type: "image/png" },
+      { url: "/K .png", sizes: "256x256", type: "image/png" },
+      { url: "/K .png", sizes: "384x384", type: "image/png" },
+      { url: "/K .png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/K .png",
+    apple: [
+      { url: "/K .png", sizes: "180x180", type: "image/png" },
+      { url: "/K .png", sizes: "256x256", type: "image/png" },
+      { url: "/K .png", sizes: "512x512", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -20,8 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="overflow-x-hidden w-full max-w-full">
-      <body className={`${inter.className} bg-[#1E1E1E] text-[#FFFFFF] overflow-x-hidden w-full max-w-full`}>
+    <html lang="en" className="overflow-x-hidden w-full max-w-full h-full">
+      <body className={`${inter.className} bg-[#1E1E1E] text-[#FFFFFF] overflow-x-hidden w-full max-w-full min-h-full`}>
         {/* Particle animation – full viewport, all pages */}
         <div className="fixed inset-0 z-0 pointer-events-none w-full h-full min-h-screen min-w-full">
           <Particles
