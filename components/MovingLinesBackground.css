@@ -1,0 +1,189 @@
+/* Floating shapes + grid background */
+
+.moving-lines-root {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Static grid - faint lines, does not move */
+.floating-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Floating geometric shapes */
+.floating-shape {
+  position: absolute;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(1px);
+}
+
+.floating-shape--diamond {
+  transform: rotate(45deg);
+  border-radius: 4px;
+}
+
+.floating-shape--diamond.floating-shape--small { width: 16px; height: 16px; }
+.floating-shape--diamond.floating-shape--medium { width: 24px; height: 24px; }
+.floating-shape--diamond.floating-shape--large { width: 32px; height: 32px; }
+
+.floating-shape--square {
+  border-radius: 6px;
+}
+
+.floating-shape--small {
+  width: 16px;
+  height: 16px;
+}
+
+.floating-shape--medium {
+  width: 24px;
+  height: 24px;
+}
+
+.floating-shape--large {
+  width: 32px;
+  height: 32px;
+}
+
+/* Slow float animations - gentle drift */
+@keyframes float-drift-1 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translate(15px, -20px) rotate(2deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-10px, -35px) rotate(-1deg);
+    opacity: 0.85;
+  }
+  75% {
+    transform: translate(-25px, -15px) rotate(1deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes float-drift-2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.75;
+  }
+  33% {
+    transform: translate(-20px, 15px) rotate(-2deg);
+    opacity: 0.9;
+  }
+  66% {
+    transform: translate(10px, 25px) rotate(1deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes float-drift-3 {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(30px, 20px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes float-drift-4 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.65;
+  }
+  25% {
+    transform: translate(-18px, -25px) rotate(3deg);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate(12px, -40px) rotate(-2deg);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translate(28px, -18px) rotate(1deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes float-drift-5 {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-25px, -30px);
+    opacity: 0.9;
+  }
+}
+
+.floating-shape--anim-1 {
+  animation: float-drift-1 22s ease-in-out infinite;
+}
+
+.floating-shape--anim-2 {
+  animation: float-drift-2 28s ease-in-out infinite;
+}
+
+.floating-shape--anim-3 {
+  animation: float-drift-3 25s ease-in-out infinite;
+}
+
+.floating-shape--anim-4 {
+  animation: float-drift-4 30s ease-in-out infinite;
+}
+
+.floating-shape--anim-5 {
+  animation: float-drift-5 26s ease-in-out infinite;
+}
+
+/* Diamond: keep 45deg rotation during float */
+@keyframes float-drift-1-diamond {
+  0%, 100% { transform: translate(0, 0) rotate(45deg); opacity: 0.7; }
+  25% { transform: translate(15px, -20px) rotate(47deg); opacity: 1; }
+  50% { transform: translate(-10px, -35px) rotate(44deg); opacity: 0.85; }
+  75% { transform: translate(-25px, -15px) rotate(46deg); opacity: 0.9; }
+}
+
+@keyframes float-drift-2-diamond {
+  0%, 100% { transform: translate(0, 0) rotate(45deg); opacity: 0.75; }
+  33% { transform: translate(-20px, 15px) rotate(43deg); opacity: 0.9; }
+  66% { transform: translate(10px, 25px) rotate(46deg); opacity: 0.8; }
+}
+
+@keyframes float-drift-3-diamond {
+  0%, 100% { transform: translate(0, 0) rotate(45deg); opacity: 0.8; }
+  50% { transform: translate(30px, 20px) rotate(45deg); opacity: 0.6; }
+}
+
+@keyframes float-drift-4-diamond {
+  0%, 100% { transform: translate(0, 0) rotate(45deg); opacity: 0.65; }
+  25% { transform: translate(-18px, -25px) rotate(48deg); opacity: 0.85; }
+  50% { transform: translate(12px, -40px) rotate(43deg); opacity: 0.7; }
+  75% { transform: translate(28px, -18px) rotate(46deg); opacity: 0.8; }
+}
+
+@keyframes float-drift-5-diamond {
+  0%, 100% { transform: translate(0, 0) rotate(45deg); opacity: 0.7; }
+  50% { transform: translate(-25px, -30px) rotate(45deg); opacity: 0.9; }
+}
+
+.floating-shape--diamond.floating-shape--anim-1 { animation: float-drift-1-diamond 22s ease-in-out infinite; }
+.floating-shape--diamond.floating-shape--anim-2 { animation: float-drift-2-diamond 28s ease-in-out infinite; }
+.floating-shape--diamond.floating-shape--anim-3 { animation: float-drift-3-diamond 25s ease-in-out infinite; }
+.floating-shape--diamond.floating-shape--anim-4 { animation: float-drift-4-diamond 30s ease-in-out infinite; }
+.floating-shape--diamond.floating-shape--anim-5 { animation: float-drift-5-diamond 26s ease-in-out infinite; }

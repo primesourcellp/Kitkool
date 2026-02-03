@@ -1,0 +1,26 @@
+/* Grid move animation for AnimatedGridBackground */
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(80px, 80px);
+  }
+}
+
+@keyframes gridMoveDiagonal {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(120px, 120px);
+  }
+}
+
+.animated-grid-bg {
+  animation: gridMove 25s linear infinite;
+}
+
+.animated-grid-bg-diagonal {
+  animation: gridMoveDiagonal 30s linear infinite reverse;
+}
