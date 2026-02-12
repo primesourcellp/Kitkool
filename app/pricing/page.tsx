@@ -67,9 +67,9 @@ export default function PricingPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-transparent pt-10 w-full overflow-x-hidden relative">
+    <main className="bg-transparent pt-10 w-full relative">
       {/* Mobile KITKOOL background text */}
-      <div className="fixed inset-0 z-0 pointer-events-none overflow-visible md:hidden" aria-hidden>
+      <div className="fixed inset-0 z-0 pointer-events-none md:hidden" aria-hidden>
         <div
           className="absolute left-1/2 bottom-1/2 origin-center"
           style={{ transform: "translate(-50%, 50%) rotate(-45deg)", whiteSpace: "nowrap" }}
@@ -80,7 +80,7 @@ export default function PricingPage() {
         </div>
       </div>
       {/* Hero – left headline, right copy */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-transparent z-10 overflow-hidden">
+      <section className="relative flex items-center justify-center py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-transparent z-10">
         <div className="relative w-full max-w-7xl mx-auto z-10 pt-8">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -135,13 +135,14 @@ export default function PricingPage() {
             >
               Get a Free Audit
             </Link>
-            <Link
-              href="/contact"
-              className="text-sm font-semibold text-[#FFFFFF]/80 hover:text-[#2ED3E6] underline underline-offset-4 inline-flex items-center gap-2"
+            <a
+              href="https://calendar.app.google/rzLENBNHjgaVmSQQ7"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ padding: "12px 24px", background: "#2e7d32", color: "white", textDecoration: "none", borderRadius: "6px", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}
             >
               Book a Call
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -368,13 +369,14 @@ export default function PricingPage() {
               >
                 Get a Free Audit
               </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 text-[#FFFFFF] border border-[#2ED3E6]/50 px-8 py-4 rounded-lg font-semibold hover:bg-[#2ED3E6]/10 transition-colors w-full sm:w-auto"
+              <a
+                href="https://calendar.app.google/rzLENBNHjgaVmSQQ7"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ padding: "12px 24px", background: "#2e7d32", color: "white", textDecoration: "none", borderRadius: "6px", display: "inline-flex", justifyContent: "center", width: "100%", maxWidth: "fit-content" }}
               >
                 Book a Call
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
           </StarBorder>
         </div>

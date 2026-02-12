@@ -64,15 +64,6 @@ export default function Navbar() {
                     ? "border-[#2ED3E6] bg-[#1FA6B8]/25"
                     : "border-[#2ED3E6]/50 bg-[#1E1E1E]"
                 }`}
-              style={{
-                boxShadow: "-4px -4px 16px -4px rgba(31,166,184,0.25), 4px 4px 16px -4px rgba(46,211,230,0.2)",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = "-6px -6px 24px -4px rgba(31,166,184,0.35), 6px 6px 24px -4px rgba(46,211,230,0.4), 0 0 32px -8px rgba(136,180,255,0.15)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = "-4px -4px 16px -4px rgba(31,166,184,0.25), 4px 4px 16px -4px rgba(46,211,230,0.2)";
-              }}
               >
                 Book a Call
               </Link>
@@ -124,12 +115,11 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className={`flex items-center justify-center px-6 py-3.5 font-semibold rounded-lg border text-[#FFFFFF] transition-all duration-300 hover:bg-gradient-to-r hover:from-[#1FA6B8] hover:to-[#2ED3E6] hover:border-[#2ED3E6] ${
+                  className={`flex items-center justify-center px-6 py-3.5 font-semibold rounded-lg border text-[#FFFFFF] transition-all duration-300 hover:bg-[#1FA6B8]/20 hover:border-[#2ED3E6]/50 ${
                     isActive("/contact")
                       ? "border-[#2ED3E6] bg-[#1FA6B8]/25"
                       : "border-[#2ED3E6]/50 bg-[#1E1E1E]"
                   }`}
-                  style={{ boxShadow: "-4px -4px 16px -4px rgba(31,166,184,0.25), 4px 4px 16px -4px rgba(46,211,230,0.2)" }}
                 >
                   Book a Call
                 </Link>

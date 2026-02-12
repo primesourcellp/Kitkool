@@ -106,9 +106,9 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-transparent pt-24 w-full overflow-x-hidden relative">
+    <main className="bg-transparent pt-24 w-full relative">
       {/* Mobile KITKOOL background text */}
-      <div className="fixed inset-0 z-0 pointer-events-none overflow-visible md:hidden" aria-hidden>
+      <div className="fixed inset-0 z-0 pointer-events-none md:hidden" aria-hidden>
         <div
           className="absolute left-1/2 bottom-1/2 origin-center"
           style={{ transform: "translate(-50%, 50%) rotate(-45deg)", whiteSpace: "nowrap" }}
@@ -141,13 +141,14 @@ export default function ServicesPage() {
               >
                 Get a Free Audit
               </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 text-[#FFFFFF] hover:text-[#2ED3E6] font-semibold transition-colors"
+              <a
+                href="https://calendar.app.google/rzLENBNHjgaVmSQQ7"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ padding: "12px 24px", background: "#2e7d32", color: "white", textDecoration: "none", borderRadius: "6px" }}
               >
                 Book a Call
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

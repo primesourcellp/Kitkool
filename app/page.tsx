@@ -218,9 +218,9 @@ export default function Home() {
   );
 
   return (
-    <main className="min-h-screen bg-transparent pt-10 w-full overflow-x-hidden relative">
+    <main className="bg-transparent pt-10 w-full relative">
       {/* Mobile KITKOOL background text */}
-      <div className="fixed inset-0 z-0 pointer-events-none overflow-visible md:hidden" aria-hidden>
+      <div className="fixed inset-0 z-0 pointer-events-none md:hidden" aria-hidden>
         <div
           className="absolute left-1/2 bottom-1/2 origin-center"
           style={{ transform: "translate(-50%, 50%) rotate(-45deg)", whiteSpace: "nowrap" }}
@@ -231,7 +231,7 @@ export default function Home() {
         </div>
       </div>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-transparent z-10 overflow-hidden">
+      <section className="relative flex items-center justify-center py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-transparent z-10">
         <div className="relative w-full max-w-7xl mx-auto z-10 pt-8">
           <div className="max-w-5xl text-center mx-auto">
             <motion.p

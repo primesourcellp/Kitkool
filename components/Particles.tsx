@@ -260,7 +260,7 @@ export default function Particles({
   return (
     <div
       ref={containerRef}
-      className={`relative w-full h-full ${className}`.trim()}
+      className={`relative w-full ${className}`.trim()}
     />
   );
 }

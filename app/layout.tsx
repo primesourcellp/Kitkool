@@ -37,10 +37,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="overflow-x-hidden w-full max-w-full h-full">
-      <body className={`${inter.className} bg-[#1E1E1E] text-[#FFFFFF] overflow-x-hidden w-full max-w-full min-h-full`}>
+    <html lang="en" className="w-full max-w-full">
+      <body className={`${inter.className} bg-[#1E1E1E] text-[#FFFFFF] w-full max-w-full`}>
         {/* Particle animation – full viewport, all pages */}
-        <div className="fixed inset-0 z-0 pointer-events-none w-full h-full min-h-screen min-w-full">
+        <div className="fixed inset-0 z-0 pointer-events-none">
           <Particles
             particleCount={500}
             particleSpread={10}
@@ -50,10 +50,10 @@ export default function RootLayout({
             particleColors={["#ffffff", "#2ED3E6", "#1FA6B8"]}
             alphaParticles
             moveParticlesOnHover={false}
-            className="absolute inset-0 w-full h-full min-h-full min-w-full"
+            className="fixed inset-0 w-full"
           />
         </div>
-        <div className="relative z-10 w-full max-w-full overflow-x-hidden">
+        <div className="relative z-10 w-full max-w-full">
           <Navbar />
           {children}
           <Footer />

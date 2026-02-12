@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Mail, Phone, Clock, ArrowRight } from "lucide-react";
@@ -21,9 +20,9 @@ export default function ContactPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-transparent pt-10 w-full overflow-x-hidden relative">
+    <main className="bg-transparent pt-10 w-full relative">
       {/* Diagonal KITKOOL background text – bottom-left to top-right */}
-      <div className="fixed inset-0 z-0 pointer-events-none overflow-visible" aria-hidden>
+      <div className="fixed inset-0 z-0 pointer-events-none" aria-hidden>
         {/* Mobile positioning - centered and fully visible */}
         <div
           className="absolute left-1/2 bottom-1/2 origin-center md:hidden"
@@ -114,13 +113,14 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-8">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 bg-[#1FA6B8] text-[#FFFFFF] px-6 py-3 rounded-lg font-semibold hover:bg-[#2ED3E6] transition-all duration-300"
+                <a
+                  href="https://calendar.app.google/rzLENBNHjgaVmSQQ7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ padding: "12px 24px", background: "#2e7d32", color: "white", textDecoration: "none", borderRadius: "6px" }}
                 >
                   Book a Call
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                </a>
               </div>
             </motion.div>
 

@@ -10,7 +10,7 @@ const quickLinks = [
   { label: "Services", href: "/services" },
   { label: "Pricing", href: "/pricing" },
   { label: "Free Website Audit", href: "/audit" },
-  { label: "Book a Call", href: "/contact" },
+  { label: "Book a Call", href: "https://calendar.app.google/rzLENBNHjgaVmSQQ7", external: true },
 ];
 
 const socialLinks = [
@@ -65,15 +65,27 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-[#FFFFFF] mb-5">Quick Links</h3>
             <ul className="space-y-3">
-              {quickLinks.map(({ label, href }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className="inline-flex items-center gap-2 text-[#FFFFFF]/80 hover:text-[#2ED3E6] transition-colors text-sm md:text-base"
-                  >
-                    <ArrowRight className="w-4 h-4 text-[#2ED3E6] flex-shrink-0" />
-                    {label}
-                  </Link>
+              {quickLinks.map(({ label, href, external }) => (
+                <li key={href + label}>
+                  {external ? (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-[#FFFFFF]/80 hover:text-[#2ED3E6] transition-colors text-sm md:text-base"
+                    >
+                      <ArrowRight className="w-4 h-4 text-[#2ED3E6] flex-shrink-0" />
+                      {label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={href}
+                      className="inline-flex items-center gap-2 text-[#FFFFFF]/80 hover:text-[#2ED3E6] transition-colors text-sm md:text-base"
+                    >
+                      <ArrowRight className="w-4 h-4 text-[#2ED3E6] flex-shrink-0" />
+                      {label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

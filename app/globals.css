@@ -11,93 +11,39 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
   width: 100%;
   max-width: 100%;
-  /* Show scrollbar for Firefox */
+  overflow-y: auto;
+  overflow-x: hidden;
   scrollbar-width: thin;
-  scrollbar-color: rgba(46, 211, 230, 0.5) rgba(30, 30, 30, 0.2);
-}
-
-/* Custom scrollbar for Chrome, Safari, Edge */
-html::-webkit-scrollbar {
-  width: 10px;
-}
-
-html::-webkit-scrollbar-track {
-  background: rgba(30, 30, 30, 0.2);
-}
-
-html::-webkit-scrollbar-thumb {
-  background: rgba(46, 211, 230, 0.5);
-  border-radius: 5px;
-}
-
-html::-webkit-scrollbar-thumb:hover {
-  background: rgba(46, 211, 230, 0.7);
+  scrollbar-color: rgba(31, 166, 184, 0.6) rgba(30, 30, 30, 0.5);
 }
 
 body {
   color: var(--white);
   background: var(--dark-charcoal);
   font-family: system-ui, -apple-system, sans-serif;
-  overflow-x: hidden;
-  overflow-y: auto;
   width: 100%;
   max-width: 100%;
   position: relative;
-  /* Show scrollbar for Firefox */
-  scrollbar-width: thin;
-  scrollbar-color: rgba(46, 211, 230, 0.5) rgba(30, 30, 30, 0.2);
 }
 
-/* Custom scrollbar for Chrome, Safari, Edge */
-body::-webkit-scrollbar {
+/* Single right-side scrollbar – only on html (viewport) */
+html::-webkit-scrollbar {
   width: 10px;
 }
 
-body::-webkit-scrollbar-track {
-  background: rgba(30, 30, 30, 0.2);
+html::-webkit-scrollbar-track {
+  background: rgba(30, 30, 30, 0.5);
 }
 
-body::-webkit-scrollbar-thumb {
-  background: rgba(46, 211, 230, 0.5);
+html::-webkit-scrollbar-thumb {
+  background: rgba(31, 166, 184, 0.6);
   border-radius: 5px;
 }
 
-body::-webkit-scrollbar-thumb:hover {
-  background: rgba(46, 211, 230, 0.7);
-}
-
-/* Custom scrollbar for all scrollable elements (except x-axis) */
-* {
-  /* Only hide horizontal scrollbars, keep vertical */
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: rgba(46, 211, 230, 0.5) rgba(30, 30, 30, 0.2);
-}
-
-*::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-*::-webkit-scrollbar-track {
-  background: rgba(30, 30, 30, 0.2);
-}
-
-*::-webkit-scrollbar-thumb {
-  background: rgba(46, 211, 230, 0.5);
-  border-radius: 5px;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background: rgba(46, 211, 230, 0.7);
-}
-
-/* Hide horizontal scrollbars */
-*::-webkit-scrollbar:horizontal {
-  height: 0;
-  display: none;
+html::-webkit-scrollbar-thumb:hover {
+  background: rgba(46, 211, 230, 0.8);
 }
 
 @layer utilities {
